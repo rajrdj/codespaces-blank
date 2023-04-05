@@ -3,32 +3,30 @@ package Grouptest1set1;
 import java.util.Scanner;
 
 public class PrintPyramid {
-	public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int N=scan.nextInt();
-        
-        for (int i=0;i<N;i++)
-        {
-            int val=i+1;
-            for (int j=0;j<(N-i-1);j++)
-            {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+
+        // iterate through each row
+        for (int i = 1; i <= n; i++) {
+
+            // print spaces before the numbers
+            for (int j = 1; j <= n-i; j++) {
                 System.out.print(" ");
             }
-            
-            for (int j=0;j<=i;j++)
-            {
-                System.out.print(val);
-                val++;
+
+            // print the numbers in descending order
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j);
             }
-            val--;
-            
-            for (int j=0;j<i;j++)
-            {
-                --val;
-                System.out.print(val);
+
+            // print the numbers in ascending order
+            for (int j = 2; j <= i; j++) {
+                System.out.print(j);
             }
-            System.out.println(" ");
+
+            // move to the next line
+            System.out.println();
         }
-        scan.close();
-	}
+    }
 }
