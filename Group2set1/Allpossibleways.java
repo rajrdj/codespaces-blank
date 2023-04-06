@@ -1,8 +1,8 @@
 package Group2set1;
 
 import java.util.Scanner;
-
-public class Solution {
+//public class Solution {
+public class Allpossibleways {
     
     public static int allWays(int a, int b) {
         int x = (int) Math.pow(a, 1.0/b);
